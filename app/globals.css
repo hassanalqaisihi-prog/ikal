@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-void text-mist antialiased;
+    background-image:
+      radial-gradient(1100px 480px at 85% -10%, rgba(122, 60, 255, 0.28), transparent),
+      radial-gradient(800px 400px at 0% 0%, rgba(25, 240, 195, 0.08), transparent);
+    background-attachment: fixed;
+  }
+  a { @apply transition-colors; }
+}
+
+@layer components {
+  .card { @apply rounded-2xl border border-white/10 bg-spore/80 p-4; }
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl border border-white/15 px-4 py-2 text-sm font-medium transition hover:border-nebula hover:text-nebula;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-xl bg-ultra px-4 py-2 text-sm font-bold text-white shadow-[0_0_20px_rgba(122,60,255,0.45)] transition hover:bg-ultra/80;
+  }
+  .input {
+    @apply w-full rounded-xl border border-white/15 bg-void px-3 py-2 text-mist placeholder:text-mist/40 focus:border-nebula focus:outline-none;
+  }
+  .pill { @apply inline-block rounded-full border border-white/15 px-2 py-0.5 text-xs text-mist/80; }
+  .muted { @apply text-sm text-mist/60; }
+  .lnk { @apply text-nebula hover:text-xenon; }
+}
